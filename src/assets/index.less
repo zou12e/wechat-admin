@@ -1,0 +1,110 @@
+@import './import.less';
+@import './normalize.less';
+@import './font-awesome.css';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  font: 14px/1.4 Open Sans,PingFang SC,Hiragino Sans GB,Heiti SC,Microsoft YaHei,monospace;
+}
+.app-wrapper {
+  height: 100%;
+  padding-top: 60px;
+  padding-left: 180px;
+}
+.app-header {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(46, 65, 85);
+  height: 60px;
+  position: fixed;
+  left: 180px;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.app-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.app-aside {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: @backgroundColor;
+  width: 180px;
+  padding-top: 60px;
+  > .el-menu {
+    border-right: none;
+  }
+  .el-submenu .el-menu-item {
+    min-width: 0;
+  }
+}
+.app-side-scroll {
+  height: 100%;
+}
+
+.app-title {
+  color: #FFF;
+  font-size: 20px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+  font-weight: normal;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.app-breadcrumb {
+  height: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  .el-breadcrumb__inner {
+    color: #303133;
+  }
+  .el-breadcrumb__item:last-child {
+    color: #606266;
+  }
+}
+.app-main {
+  padding: 0;
+}
+
+.app-content {
+  padding: 10px;
+}
+
+.details-dialog {
+  min-width: 600px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+.is-hidden-input {
+  display: none !important;
+}

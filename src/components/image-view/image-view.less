@@ -1,0 +1,31 @@
+.image-view {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  > img {
+    max-width: 1200px;
+    max-height: 80%;
+    transition: all .3s;
+    cursor: pointer;
+  }
+}
+
+.image-fade-enter-active,
+.image-fade-leave-active{
+  transition: all .3s;
+}
+
+.image-fade-enter,
+.image-fade-leave-to{
+  opacity: 0;
+  > img {
+    transform: scale(.6);
+  }
+}
