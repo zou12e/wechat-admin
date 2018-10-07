@@ -5,14 +5,14 @@ function resolve (pathName) {
 }
 
 module.exports = {
-  // devServer: {
-  //   port: 8080,
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://winbitex.zourunze.com'
-  //     }
-  //   }
-  // },
+  devServer: {
+    port: 8080,
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:4001'
+      }
+    }
+  },
   chainWebpack (config) {
     config.resolve.alias
       .set('@common', resolve('src'));

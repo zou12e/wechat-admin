@@ -2,7 +2,7 @@ import http from '@common/http';
 import md5 from 'js-md5';
 
 export function signin (username, password, validateCode) {
-  return http.post('/v1/manage/login', {
+  return http.post('/admin/login', {
     username,
     password: md5(password),
     validateCode
